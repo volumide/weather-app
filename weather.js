@@ -19,7 +19,7 @@ function weather(location = 'Lagos'){
 		let result = data['data']
 		// <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="" srcset="">
 		//  http://openweathermap.org/img/wn/10d@2x.png
-		document.getElementById('temp').innerHTML = Math.floor((+result.main.temp - 32) * 5/9) + '<span>°C </span>'
+		document.getElementById('temp').innerHTML = Math.floor(+result.main.temp -  273.15) + '<span>°C </span>'
 		document.getElementById('icon').innerHTML = ` <img src=" http://openweathermap.org/img/wn/${result.weather[0].icon}.png" alt="" srcset="">`
 		document.getElementById('region').innerText = result.name 
 		document.getElementById('country').innerText = result.sys.country 
