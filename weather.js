@@ -22,8 +22,6 @@ function weather(location = 'Lagos'){
 		document.getElementById('region').innerText = result.name 
 		document.getElementById('country').innerText = result.sys.country
 		document.getElementById('status').innerText = result.weather[0].main 
-		
-		console.log(result)
 	})
 	.catch(err => console.log(err))
 }
